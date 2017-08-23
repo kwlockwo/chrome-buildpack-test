@@ -1,0 +1,20 @@
+{
+  "name": "chrome-buildpack-test",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/kwlockwo/heroku-buildpack-google-chrome.git"
+    },
+    {
+      "url": "heroku/java"
+    }
+  ]
+}
