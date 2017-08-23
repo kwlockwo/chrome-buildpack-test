@@ -14,5 +14,4 @@ public class ChromeTest {
 		Chrome chromeTest = new Chrome();
 		assertEquals("Google", chromeTest.getGoogle());
 	}
-
 }
