@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Chrome {
 	
@@ -11,9 +12,12 @@ public class Chrome {
 	
 	public Chrome() {
 		String chromeBin = System.getenv("GOOGLE_CHROME_SHIM");
-		System.setProperty("webdriver.chrome.driver", chromeBin);
+		System.out.println("Chrome Bin: " + chromeBin);
 		
-		driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.setBinary(chromeBin);
+		
+		driver = new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
 	
