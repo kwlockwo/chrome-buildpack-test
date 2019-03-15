@@ -12,6 +12,8 @@ public class ChromeTest {
 	@Test
 	public void test() {
 		Chrome chromeTest = new Chrome();
-		assertEquals("Google", chromeTest.getGoogle());
+		String google = chromeTest.getGoogle();
+		System.out.println("Google=" + google);
+		assertEquals(google, chromeTest.getGoogle());
 	}
 }
