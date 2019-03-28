@@ -12,8 +12,14 @@ public class ChromeTest {
 	@Test
 	public void test() {
 		Chrome chromeTest = new Chrome();
-		String google = chromeTest.getGoogle();
-		System.out.println("Google=" + google);
-		assertEquals(google, chromeTest.getGoogle());
+		
+		driver.get("https://www.google.com");
+		driver.findElement(By.name("q")).sendKeys("heroku");
+		driver.findElement(By.name("btnK")).click();
+		
+		String title = driver.getTitle();
+		
+		System.out.println("Title=" + title);
+		assertEquals("heroku - Google Search", title);
 	}
 }
