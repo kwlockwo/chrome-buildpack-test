@@ -24,7 +24,10 @@ public class Chrome {
 	public String getGoogle() {
 		String google = "";
 		
-		driver.get("http://www.google.com/xhtml");
+		driver.get("https://www.google.com");
+		driver.findElement(By.name("q")).sendKeys("heroku");
+		driver.findElement(By.name("btnK")).click();
+		
 		google = driver.getTitle();
 		
 		return google;
