@@ -14,6 +14,6 @@ public class ChromeTest {
 		Chrome chromeTest = new Chrome();
 		String google = chromeTest.getGoogle();
 		System.out.println("Google=" + google);
-		assertEquals(google, "heroku - Google Serach");
+		assertEquals(google, "heroku - Google Search");
 	}
 }
