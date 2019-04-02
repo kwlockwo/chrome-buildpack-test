@@ -8,9 +8,6 @@
     },
     "HEROKU_PARENT_APP_NAME": {
       "required": true
-    },
-    "HEROKU_SLUG_COMMIT": {
-      "required": true
     }
   },
   "formation": {
